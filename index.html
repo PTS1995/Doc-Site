@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ιατρείο | Δρ. Όνομα Επώνυμο</title>
+  <meta name="description" content="Ιατρείο Δρ. Όνομα Επώνυμο — Εξειδικευμένη ιατρική φροντίδα στην Αθήνα.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Κεφαλίδα / Μενού ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">+</span>
+        <span class="logo-text">Δρ. Όνομα <strong>Επώνυμο</strong></span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Αρχική</a>
+        <a href="#services">Υπηρεσίες</a>
+        <a href="#about">Η Ιατρός</a>
+        <a href="#contact">Επικοινωνία</a>
+        <a href="#contact" class="btn btn-small">Κλείστε Ραντεβού</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Μενού">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== Κεντρική ενότητα (Hero) ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Ιατρείο στην Αθήνα</p>
+        <h1>Εξειδικευμένη φροντίδα,<br>με ανθρώπινο πρόσωπο.</h1>
+        <p class="lead">
+          Σύγχρονες ιατρικές υπηρεσίες με έμφαση στην πρόληψη, τη σωστή
+          ενημέρωση και την προσωπική σχέση με κάθε ασθενή.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Κλείστε Ραντεβού</a>
+          <a href="#services" class="btn btn-outline">Δείτε τις Υπηρεσίες</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-photo" aria-hidden="true">
+          <!-- Εδώ μπαίνει φωτογραφία: αντικαταστήστε με <img src="photo.jpg" alt="..."> -->
+          <span>Φωτογραφία<br>Ιατρού / Ιατρείου</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Γρήγορες πληροφορίες ===== -->
+  <section class="info-strip">
+    <div class="container info-grid">
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div><strong>Διεύθυνση</strong><br>Οδός 123, Αθήνα 11527</div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🕐</span>
+        <div><strong>Ωράριο</strong><br>Δευ–Παρ 09:00–20:00</div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <div><strong>Τηλέφωνο</strong><br><a href="tel:+302101234567">210 123 4567</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Υπηρεσίες ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <p class="eyebrow center">Τι προσφέρουμε</p>
+      <h2 class="center">Υπηρεσίες</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">🩺</div>
+          <h3>Υπηρεσία 1</h3>
+          <p>Σύντομη περιγραφή της υπηρεσίας. Δύο έως τρεις προτάσεις που εξηγούν τι περιλαμβάνει και σε ποιον απευθύνεται.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🔬</div>
+          <h3>Υπηρεσία 2</h3>
+          <p>Σύντομη περιγραφή της υπηρεσίας. Δύο έως τρεις προτάσεις που εξηγούν τι περιλαμβάνει και σε ποιον απευθύνεται.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🧪</div>
+          <h3>Υπηρεσία 3</h3>
+          <p>Σύντομη περιγραφή της υπηρεσίας. Δύο έως τρεις προτάσεις που εξηγούν τι περιλαμβάνει και σε ποιον απευθύνεται.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💬</div>
+          <h3>Υπηρεσία 4</h3>
+          <p>Σύντομη περιγραφή της υπηρεσίας. Δύο έως τρεις προτάσεις που εξηγούν τι περιλαμβάνει και σε ποιον απευθύνεται.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Η Ιατρός ===== -->
+  <section class="section section-alt" id="about">
+    <div class="container about-grid">
+      <div class="about-photo" aria-hidden="true">
+        <span>Φωτογραφία<br>Ιατρού</span>
+      </div>
+      <div>
+        <p class="eyebrow">Γνωρίστε μας</p>
+        <h2>Δρ. Όνομα Επώνυμο<br><span class="subtitle">MD, MSc — Ειδικότητα</span></h2>
+        <p>
+          Εδώ γράφετε ένα σύντομο βιογραφικό: πού σπούδασε, πού ειδικεύτηκε,
+          πόσα χρόνια εμπειρίας έχει και ποια είναι η φιλοσοφία της απέναντι
+          στους ασθενείς της.
+        </p>
+        <ul class="checklist">
+          <li>Πτυχίο Ιατρικής — Πανεπιστήμιο Χ</li>
+          <li>Ειδίκευση — Νοσοκομείο Υ</li>
+          <li>Μέλος επιστημονικών εταιρειών</li>
+          <li>15+ χρόνια κλινικής εμπειρίας</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Επικοινωνία ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <p class="eyebrow center">Είμαστε εδώ για εσάς</p>
+      <h2 class="center">Επικοινωνία &amp; Ραντεβού</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Στοιχεία Επικοινωνίας</h3>
+          <p><strong>Διεύθυνση:</strong> Οδός 123, Αθήνα 11527</p>
+          <p><strong>Τηλέφωνο:</strong> <a href="tel:+302101234567">210 123 4567</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@example.gr">info@example.gr</a></p>
+          <p><strong>Ωράριο:</strong> Δευτέρα–Παρασκευή 09:00–20:00</p>
+          <a href="tel:+302101234567" class="btn">📞 Καλέστε μας τώρα</a>
+        </div>
+        <div class="contact-map">
+          <!-- Χάρτης: στο Google Maps πατήστε "Κοινοποίηση" → "Ενσωμάτωση χάρτη" και επικολλήστε εδώ το iframe -->
+          <div class="map-placeholder"><span>Χάρτης Google Maps</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Υποσέλιδο ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Δρ. Όνομα Επώνυμο — Όλα τα δικαιώματα διατηρούνται.</p>
+      <p class="footer-links">
+        <a href="#home">Αρχική</a> · <a href="#services">Υπηρεσίες</a> ·
+        <a href="#about">Η Ιατρός</a> · <a href="#contact">Επικοινωνία</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  </script>
+</body>
+</html>
