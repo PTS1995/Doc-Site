@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Επικοινωνία και ραντεβού | Βασίλειος Λυγίζος</title>
   <meta name="description" content="Κλείστε ραντεβού στο ιδιωτικό ιατρείο του μαιευτήρα–γυναικολόγου Βασιλείου Λυγίζου: Σεμιτέλου 5, Πλατεία Μαβίλη, Αθήνα.">
-  <meta name="theme-color" content="#1F585C">
+  <meta name="theme-color" content="#0F2E30">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="el_GR">
   <meta property="og:title" content="Επικοινωνία και ραντεβού | Βασίλειος Λυγίζος">
@@ -13,8 +13,9 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Physician", "name": "Βασίλειος Λυγίζος", "description": "Μαιευτήρας – Γυναικολόγος, MD, MSc", "medicalSpecialty": ["Gynecologic", "Obstetric", "Oncologic"], "address": {"@type": "PostalAddress", "streetAddress": "Σεμιτέλου 5", "addressLocality": "Αθήνα", "addressCountry": "GR"}}</script>
 </head>
 <body>
@@ -56,18 +57,23 @@
   <main id="main">
 
     <section class="page-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="aurora a1"></span><span class="aurora a2"></span><span class="aurora a3"></span>
+        <span class="grain"></span>
+      </div>
       <div class="container">
-        <nav class="breadcrumb" aria-label="Διαδρομή">
+        <nav class="breadcrumb" aria-label="Διαδρομή" data-reveal style="--i:0">
           <a href="index.html">Αρχική</a><span aria-hidden="true">/</span><span aria-current="page">Επικοινωνία</span>
         </nav>
-        <h1>Επικοινωνία και ραντεβού</h1>
-        <p class="lead">Για να κλείσετε ραντεβού ή να ρωτήσετε ποια έγγραφα θα χρειαστείτε, μπορείτε να επικοινωνήσετε τηλεφωνικά με το ιατρείο. Αν το ραντεβού αφορά συγκεκριμένη εξέταση ή δεύτερη γνώμη, αναφέρετέ το κατά τον προγραμματισμό.</p>
+        <h1 data-split>Επικοινωνία και ραντεβού</h1>
+        <p class="lead" data-reveal style="--i:3">Για να κλείσετε ραντεβού ή να ρωτήσετε ποια έγγραφα θα χρειαστείτε, μπορείτε να επικοινωνήσετε τηλεφωνικά με το ιατρείο. Αν το ραντεβού αφορά συγκεκριμένη εξέταση ή δεύτερη γνώμη, αναφέρετέ το κατά τον προγραμματισμό.</p>
       </div>
+      <svg class="hero-curve to-white" viewBox="0 0 1440 72" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 72V38C190 10 430 0 720 14s540 46 720 22v36z"/></svg>
     </section>
 
     <section class="section">
       <div class="container contact-grid">
-        <div class="contact-card">
+        <div class="contact-card" data-reveal style="--i:0">
           <h2>Πού θα μας βρείτε</h2>
           <div class="contact-item">
             <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -98,7 +104,7 @@
             <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=Semitelou+5%2C+Athens%2C+Greece" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Οδηγίες πρόσβασης</span><span class="sr-only"> (ανοίγει σε νέα καρτέλα)</span></a>
           </div>
         </div>
-        <div class="map">
+        <div class="map" data-reveal style="--i:1">
           <iframe src="https://maps.google.com/maps?q=Semitelou%205%2C%20Athens%2C%20Greece&amp;z=16&amp;output=embed" title="Χάρτης: Σεμιτέλου 5, Πλατεία Μαβίλη, Αθήνα" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
