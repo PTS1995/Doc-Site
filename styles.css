@@ -12,7 +12,8 @@
   --ink: #1B2627;            /* κείμενο */
   --muted: #566566;          /* δευτερεύον κείμενο */
   --line: #E2DED6;
-  --gold: #A9814F;           /* λεπτές λεπτομέρειες */
+  --gold: #B48659;           /* χρυσό του λογότυπου (από την κάρτα) */
+  --gold-light: #D9BC8F;
   --white: #FFFFFF;
 
   --radius: 14px;
@@ -116,17 +117,16 @@ p { margin: 0 0 1.1em; }
 }
 .header-top { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); min-width: 0; }
-.brand-mark {
-  display: grid; place-items: center; flex: none;
-  width: 46px; height: 46px; border-radius: 50%;
-  background: var(--brand); color: #fff;
-  font: 500 1.02rem/1 var(--font-serif); letter-spacing: .04em;
-}
+.brand-logo { flex: none; width: 40px; height: 52px; color: var(--gold); }
+.brand-logo path { vector-effect: non-scaling-stroke; stroke-width: 1.6px; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
 .brand-name { font: 500 1.2rem/1.2 var(--font-serif); color: var(--brand-ink); }
 .brand-role { font-size: .8125rem; color: var(--muted); }
 .header-actions { display: flex; align-items: center; gap: 22px; }
-.header-address { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--muted); text-decoration: none; }
+.header-address { display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; color: var(--muted); text-decoration: none; white-space: nowrap; }
+.header-phone { display: inline-flex; align-items: center; gap: 8px; font-size: .95rem; font-weight: 600; color: var(--brand-ink); text-decoration: none; white-space: nowrap; }
+.header-phone svg { width: 16px; height: 16px; color: var(--brand); }
+.header-phone:hover { color: var(--brand); }
 .header-address svg { width: 16px; height: 16px; color: var(--brand); }
 .header-address:hover { color: var(--brand); }
 
@@ -174,6 +174,7 @@ p { margin: 0 0 1.1em; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px; align-items: center; }
 .hero h1 { margin-bottom: .2em; }
 .hero-role { font-size: 1.15rem; font-weight: 600; color: var(--brand); margin-bottom: 16px; }
+.hero-degrees { display: block; margin-top: 2px; font-size: .95rem; font-weight: 500; letter-spacing: .02em; color: var(--muted); }
 .hero-affil { font-size: .98rem; line-height: 1.6; color: var(--muted); padding-left: 16px; border-left: 2px solid var(--gold); margin-bottom: 24px; max-width: 560px; }
 .hero-media .portrait { max-width: 440px; margin-left: auto; }
 
@@ -184,11 +185,11 @@ p { margin: 0 0 1.1em; }
   background: radial-gradient(120% 90% at 20% 10%, #fff 0%, var(--brand-soft) 55%, #CFE0DE 100%);
   box-shadow: var(--shadow);
 }
-.portrait-monogram {
-  position: absolute; inset: 0; display: grid; place-items: center;
-  font: 400 clamp(5rem, 12vw, 8.5rem)/1 var(--font-serif); letter-spacing: .04em;
-  color: var(--brand); opacity: .2;
+.portrait-logo {
+  position: absolute; left: 50%; top: 42%; width: 46%; height: auto;
+  transform: translate(-50%, -50%); color: var(--gold); opacity: .5;
 }
+.portrait:not(:has(figcaption)) .portrait-logo { top: 50%; }
 .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .portrait figcaption {
   position: absolute; left: 20px; right: 20px; bottom: 20px;
@@ -200,9 +201,9 @@ p { margin: 0 0 1.1em; }
 
 /* ---------- Αρχική: πιστοποιήσεις ---------- */
 .credentials { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.credentials-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-.credential { display: flex; gap: 16px; align-items: flex-start; padding: 28px 28px 28px 0; }
-.credential + .credential { padding-left: 28px; border-left: 1px solid var(--line); }
+.credentials-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.credential { display: flex; gap: 14px; align-items: flex-start; padding: 28px 22px 28px 0; }
+.credential + .credential { padding-left: 22px; border-left: 1px solid var(--line); }
 .credential strong { display: block; font-size: .98rem; font-weight: 600; line-height: 1.35; color: var(--brand-ink); margin-bottom: 4px; }
 .credential span { display: block; font-size: .9rem; line-height: 1.45; color: var(--muted); }
 
@@ -312,6 +313,8 @@ p { margin: 0 0 1.1em; }
 .contact-item p { margin: 0; }
 .contact-label { font-size: .8rem; font-weight: 600; letter-spacing: .02em; color: var(--brand); }
 .contact-value { font-size: 1.08rem; color: var(--ink); }
+.contact-value a { color: var(--ink); font-weight: 600; text-decoration: none; }
+.contact-value a:hover { color: var(--brand); text-decoration: underline; }
 .placeholder { display: inline-block; padding: 2px 10px; border-radius: 6px; background: #FFF1C2; color: #7A5B00; font-size: .9rem; font-weight: 600; }
 .map { min-height: 440px; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--brand-soft); }
 .map iframe { display: block; width: 100%; height: 100%; min-height: 440px; border: 0; }
@@ -326,12 +329,25 @@ p { margin: 0 0 1.1em; }
 .footer-grid { display: grid; grid-template-columns: 1fr 1.35fr auto; gap: 48px; padding-bottom: 48px; }
 .footer-name { font: 500 1.3rem/1.3 var(--font-serif); color: #fff; margin-bottom: 4px; }
 .footer-role { margin-bottom: 16px; }
-.footer-address { display: inline-flex; align-items: flex-start; gap: 8px; }
-.footer-address svg { width: 18px; height: 18px; flex: none; margin-top: 3px; }
+.footer-logo { display: block; width: 44px; height: 58px; margin-bottom: 18px; color: var(--gold-light); }
+.footer-logo path { vector-effect: non-scaling-stroke; stroke-width: 1.5px; }
+.footer-contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.footer-contact a { display: inline-flex; align-items: flex-start; gap: 10px; }
+.footer-contact svg { width: 17px; height: 17px; flex: none; margin-top: 4px; color: var(--gold-light); }
 .footer-nav ul { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 32px; }
 .footer-nav li { margin-bottom: 10px; break-inside: avoid; }
 .footer-bottom { border-top: 1px solid rgba(255, 255, 255, .12); padding: 20px 0; font-size: .85rem; color: rgba(255, 255, 255, .55); }
 .footer-bottom p { margin: 0; }
+
+/* ---------- Μικρότερες οθόνες υπολογιστή ---------- */
+@media (max-width: 1199px) {
+  .header-address { display: none; }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .credentials-grid { grid-template-columns: repeat(2, 1fr); }
+  .credential:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .credential:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
 
 /* ---------- Tablet ---------- */
 @media (max-width: 1023px) {
@@ -371,7 +387,8 @@ p { margin: 0 0 1.1em; }
   .header-top { height: 68px; gap: 12px; }
   .btn-header { display: none; }
   .brand { gap: 12px; }
-  .brand-mark { width: 40px; height: 40px; font-size: .92rem; }
+  .brand-logo { width: 34px; height: 44px; }
+  .header-phone { display: none; }
   .brand-name { font-size: 1.06rem; }
   .brand-role { font-size: .75rem; }
 
@@ -393,12 +410,13 @@ p { margin: 0 0 1.1em; }
 
   /* Το «Κλείστε ραντεβού» μένει πάντα ορατό στο κινητό */
   .mobile-cta {
-    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+    display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
     background: rgba(255, 255, 255, .97);
     border-top: 1px solid var(--line);
     box-shadow: 0 -6px 20px rgba(15, 46, 48, .08);
   }
-  .mobile-cta .btn { width: 100%; }
+  .mobile-cta .btn { flex: 1; }
+  .mobile-cta .btn-call { flex: 0 0 auto; padding: 12px 18px; background: #fff; }
   body.has-mobile-cta { padding-bottom: 76px; }
 }
